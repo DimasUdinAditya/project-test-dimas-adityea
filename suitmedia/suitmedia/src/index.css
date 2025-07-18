@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* navbar css (dibuat 1 stylesheet untuk hemat waktu */
+
+nav {
+  display: flex;
+  padding: 1% 6%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f96500;
+}
+
+nav img {
+  width: 100px;
+}
+
+nav ul{
+  padding-right: 10%;
+  flex: 1;
+  text-align: right;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 20px;
+  position: relative;
+}
+
+nav ul li a {
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  bottom: 0px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a.active::after {
+  width: 100%;
+}
+
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: top 0.3s, background 0.3s;
+  background: #f96500;
+}
+.fixed-navbar.scrolled {
+  background: rgba(249, 101, 0, 0.7);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.fixed-navbar.hide {
+  top: -80px;
+}
+
+
+/* CSS BANNER */
+
+.banner {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.banner-img {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  object-fit: cover;
+  z-index: 1;
+  transition: transform 0.1s ease-out;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); 
+  z-index: 2;
+}
+
+.banner-text {
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  color: white;
+  padding: 100px 50px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.banner-text p {
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.banner-slope {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 4;
+}
+
+/* Pagination CSS */
+
+.container {
+  padding: 24px;
+  font-family: 'Inter', sans-serif;
+}
+
+.header-controls {
+  padding: 0 100px 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.status-text {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.dropdowns {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.dropdowns select {
+  width: 100px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: 
+    url("data:image/svg+xml;utf8,<svg fill='black' height='18' viewBox='0 0 24 24' width='18' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>")
+    no-repeat right 12px center/18px 18px;
+  padding-right: 36px; 
+  border-radius: 20px;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.dropdowns label {
+  font-size: 14px;
+  color: #333;
+}
+
+.post-grid {
+  padding: 0 100px 0 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.post-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  transition: transform 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.post-card .content {
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card .date {
+  padding: 5% 7% 0 7%;
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.post-card .post-title {
+  padding: 0 7% 0 7%;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.4em;
+  height: 4.2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+}
+
+
+/* Control CSS */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.controls-right {
+  display: flex;
+  gap: 12px;
+}
+
+
+/* Pagination CSS */
+.pagination {
+  padding: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 32px 0 0 0;
+}
+
+.pagination button,
+.pagination span {
+  min-width: 20px;
+  height: 20px;
+  border: none;
+  color: #333;
+  border-radius: 40%;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #f96500;
+  color: #fff;
+}
+
+.pagination button.active,
+.pagination span.active {
+  background: #f96500;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(249,101,0,0);
+}
+
+.pagination button:disabled {
+  color: #bbb;
+  cursor: not-allowed;
+}
+
+/* FOOTER CSS */
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
