@@ -16,7 +16,7 @@ function PostCard({ post }) {
           src={imgSrc}
           alt={post.title}
           loading="lazy"
-          onError={() => setImgSrc("/project-test-dimas-adityea/placeholder.png")}
+          onError={() => setImgSrc("/placeholder.png")}
         />
       )}
       <div className="date">
