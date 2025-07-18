@@ -31,22 +31,22 @@ function Navbar() {
       <img src={suitmediaLogo} alt="Suitmedia Logo" />
       <ul>
         <li>
-          <NavLink to="/Work">Work</NavLink>
+          <NavLink to="/project-test-dimas-adityea/Work">Work</NavLink>
         </li>
         <li>
-          <NavLink to="/About">About</NavLink>
+          <NavLink to="/project-test-dimas-adityea/About">About</NavLink>
         </li>
         <li>
-          <NavLink to="/Services">Services</NavLink>
+          <NavLink to="/project-test-dimas-adityea/Services">Services</NavLink>
         </li>
         <li>
-          <NavLink to="/Ideas">Ideas</NavLink>
+          <NavLink to="/project-test-dimas-adityea/Ideas">Ideas</NavLink>
         </li>
         <li>
-          <NavLink to="/Careers">Careers</NavLink>
+          <NavLink to="/project-test-dimas-adityea/Careers">Careers</NavLink>
         </li>
         <li>
-          <NavLink to="/Contact">Contact</NavLink>
+          <NavLink to="/project-test-dimas-adityea/Contact">Contact</NavLink>
         </li>
       </ul>
     </nav>

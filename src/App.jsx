@@ -15,13 +15,13 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<Ideas />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/Ideas" element={<Ideas />} />
-        <Route path="/Services" element={<Services />} />
-        <Route path="/Work" element={<Work />} />
-        <Route path="/Careers" element={<Careers />} />
+        <Route path="/project-test-dimas-adityea/" element={<Ideas />} />
+        <Route path="/project-test-dimas-adityea/About" element={<About />} />
+        <Route path="/project-test-dimas-adityea/Contact" element={<Contact />} />
+        <Route path="/project-test-dimas-adityea/Ideas" element={<Ideas />} />
+        <Route path="/project-test-dimas-adityea/Services" element={<Services />} />
+        <Route path="/project-test-dimas-adityea/Work" element={<Work />} />
+        <Route path="/project-test-dimas-adityea/Careers" element={<Careers />} />
       </Routes>
       <Footer/>
     </BrowserRouter>

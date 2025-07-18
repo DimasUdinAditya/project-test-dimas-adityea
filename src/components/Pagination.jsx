@@ -4,7 +4,6 @@ function Pagination({ totalItems, pageSize, currentPage, onPageChange }) {
   const totalPages = Math.ceil(totalItems / pageSize);
   if (totalPages === 1) return null;
 
-  // Helper to build visible page numbers
   const getPages = () => {
   const pages = [];
   if (totalPages <= 5) {
